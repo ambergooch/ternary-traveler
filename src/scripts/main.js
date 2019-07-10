@@ -1,1 +1,4 @@
-console.log("Your Webpack application is set up and ready to go. Please start writing code.")
+import {API} from "./api.js"
+import {render} from "./renderToDOM.js"
+
+API.getInterests().then(render.renderInterestForm)
