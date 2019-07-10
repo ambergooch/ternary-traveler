@@ -110,14 +110,28 @@ const component = {
         let editBtn = document.createElement("button")
         let deleteBtn = document.createElement("button")
         childDiv.setAttribute("id", `interest-${interest.id}`)
-        childDiv.innerHTML = `
-        <div>
-            <h3>${interest.name}</h3>
-            <p><strong>Description:</strong> ${interest.description}</p>
-            <p><strong>Cost:</strong> ${interest.cost}</p>
-            <p><strong>Place:</strong> ${interest.place.name}</p>
-        </div>
-        `
+
+        if (interest.review === "") {
+            childDiv.innerHTML = `
+                <div>
+                    <h3>${interest.name}</h3>
+                    <p><strong>Description:</strong> ${interest.description}</p>
+                    <p><strong>Cost:</strong> ${interest.cost}</p>
+                    <p><strong>Place:</strong> ${interest.place.name}</p>
+                </div>
+            `
+        } else {
+            childDiv.innerHTML = `
+                <div>
+                    <h3>${interest.name}</h3>
+                    <p><strong>Description:</strong> ${interest.description}</p>
+                    <p><strong>Cost:</strong> ${interest.cost}</p>
+                    <p><strong>Place:</strong> ${interest.place.name}</p>
+                    <p><strong>Review:</strong> ${interest.review}</p>
+                </div>
+            `
+
+        }
         editBtn.textContent = "edit"
         editBtn.addEventListener("click", () => {
             console.log(childDiv.id)

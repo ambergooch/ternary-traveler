@@ -26,17 +26,17 @@
       "review": "You can definitely get things for a lower price if you are willing to bargain!"
     },
     {
-      "placeId": 2,
-      "name": "Festival",
-      "description": "cool stuff",
+      "placeId": 3,
+      "name": "Museum",
+      "description": "Cool art",
       "cost": "1.00",
-      "review": "The art was indeed cool",
+      "review": "It was cool",
       "id": 4
     },
     {
-      "placeId": 2,
-      "name": "Festival",
-      "description": "cool stuff",
+      "placeId": 3,
+      "name": "Museum",
+      "description": "Cool art",
       "cost": "15.00",
       "review": "",
       "id": 5
