@@ -17,12 +17,21 @@
     }
   ],
   "interests": [
-    { "id": 1,
+    {
+      "id": 1,
       "placeId": 1,
       "name": "Local Market",
       "description": "Local market where you can purchase local products and try the local food",
-      "cost": 0.00,
+      "cost": 0,
       "review": "You can definitely get things for a lower price if you are willing to bargain!"
+    },
+    {
+      "placeId": 1,
+      "name": "jfklsa",
+      "description": "faf",
+      "cost": "0",
+      "review": "",
+      "id": 2
     }
   ]
 }

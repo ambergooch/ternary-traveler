@@ -1,4 +1,5 @@
 import {component} from "./component.js"
+import {API} from "./api.js"
 
 const render = {
     renderInterestsToDOM (interests) {
@@ -12,7 +13,7 @@ const render = {
     getAndDisplay() {
         document.querySelector("#container").innerHTML = ""
         API.getInterests()
-        .then(renderInterestToDom)
+        .then(this.renderInterestsToDOM)
     }
 }
 

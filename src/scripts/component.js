@@ -21,7 +21,7 @@ const component = {
             cost: null,
             review: null
         }
-        for (let i=0; i < interestData.length; i++) {
+        for (let i = 0; i < interestData.length; i++) {
             if (i === 0) {
                 interest.placeId = interestData[i]
             } else if (i === 1) {
@@ -79,7 +79,8 @@ const component = {
             const interestCost = document.querySelector("#interest-cost").value;
             const interestReview = ""
 
-            const newInterest = interestFactory(interestLocation, interestName, interestDesc, interestCost, interestReview)
+            const interestArray = [interestLocation, interestName, interestDesc, interestCost, interestReview]
+            const newInterest = this.interestFactory(interestArray)
 
             API.saveInterest(newInterest)
             .then(data => data.json())

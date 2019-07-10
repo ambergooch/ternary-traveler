@@ -8,7 +8,7 @@ const API = {
             .then(response => response.json())
     },
     saveInterest (newInterest) {
-        return fetch ("http://localhost:3000/interests", {
+        return fetch ("http://localhost:8088/interests", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -17,7 +17,7 @@ const API = {
         })
     },
     editInterest (editedInterest) {
-        return fetch(`http://localhost:3000/interests/${editedInterest.id}`, {
+        return fetch(`http://localhost:8088/interests/${editedInterest.id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"
@@ -26,7 +26,7 @@ const API = {
         })
     },
     deleteInterest (id) {
-        return fetch(`http://localhost:3000/interests/${id}`, {
+        return fetch(`http://localhost:8088/interests/${id}`, {
             method: "DELETE",
             headers:{
                 "Content-Type": "application/json"
