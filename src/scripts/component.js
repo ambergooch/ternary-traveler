@@ -66,9 +66,19 @@ const component = {
                 </select>
             </fieldset>
         `
+        this.populatePlaces()
         formContainer.appendChild(submitBtn)
         this.submitInterestForm(submitBtn)
         return formContainer
+    },
+
+    populatePlaces () {
+        API.getPlaces().then(places => {
+            places.forEach(place => {
+                const placeSelect = document.querySelector("#interest-place")
+                placeSelect.innerHTML += `<option value=${place.id}>${place.name}</option>`
+            })
+        })
     },
 
     submitInterestForm (submitBtn) {
@@ -91,8 +101,18 @@ const component = {
         })
     },
 
-    createInterestComponent () {
-
+    createInterestComponent (interest) {
+        let parentDiv = document.createElement("div")
+        let childDiv = document.createElement("div")
+        childDiv.setAttribute("id", `interest-${interest.id}`)
+        childDiv.innerHTML = `
+        <div>
+            <h3>${interest.name}</h3>
+            <p><strong>Description:</strong> ${interest.description}</p>
+            <p><strong>Cost:</strong> ${interest.cost}</p>
+            <p><strong>Place:</strong> ${interest.place.name}</p>
+        </div>
+        `
     }
 }
 

@@ -4,7 +4,7 @@ import {API} from "./api.js"
 const render = {
     renderInterestsToDOM (interests) {
         for (let i = 0; i > interests.length; i++) {
-            document.querySelector("#container").appendChild(functionz)
+            document.querySelector("#container").appendChild(component.createInterestComponent(interests[i]))
         }
     },
     renderInterestForm () {
